@@ -33,98 +33,98 @@ const Hero = () => {
         mx: 5,
       }}
     >
-        <Swiper
-          loop={true}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          {mySlider.map((item) => {
-            return (
-              <SwiperSlide key={item.link} className="parent-slider">
-                <img src={item.link} alt="" />
-                <Box
+      <Swiper
+        loop={true}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {mySlider.map((item) => {
+          return (
+            <SwiperSlide key={item.link} className="parent-slider">
+              <img src={item.link} alt="" />
+              <Box
+                sx={{
+                  [theme.breakpoints.up("sm")]: {
+                    position: "absolute",
+                    left: "10%",
+                    textAlign: "left",
+                  },
+                }}
+              >
+                <Typography
                   sx={{
-                    [theme.breakpoints.up("sm")]: {
-                      position: "absolute",
-                      left: "10%",
-                      textAlign: "left",
+                    color: "#222",
+                  }}
+                  variant="h6"
+                >
+                  LIFESTYLEE COLLECTION
+                </Typography>
+
+                <Typography
+                  sx={{
+                    color: "#222",
+                    fontWeight: 400,
+                    my: 1,
+                  }}
+                  variant="h4"
+                >
+                  {item.text}
+                </Typography>
+                <Stack
+                  sx={{
+                    justifyContent: { xs: "center", sm: "left" },
+                  }}
+                  direction={"row"}
+                  alignItems={"center"}
+                >
+                  <Typography variant="h5" color={"#333"} mr={1}>
+                    SALE UP TO
+                  </Typography>
+                  <Typography variant="h5" color={"#D23F57"}>
+                    {item.discount} OFF
+                  </Typography>
+                </Stack>
+                <Typography
+                  sx={{
+                    color: "#000",
+                    fontWeight: 300,
+                    my: 1,
+                  }}
+                  variant="body2"
+                >
+                  Get Free Shipping on orders over $99.00
+                </Typography>
+                <Button
+                  sx={{
+                    [theme.breakpoints.down("sm")]: {
+                      fontSize: 12,
+                      borderRadius: "8px",
+                    },
+                    px: 5,
+                    py: 1,
+                    mt: 2,
+                    mb: 4,
+                    bgcolor: "#222",
+                    boxShadow: "0px 4px 16px rgba(43, 52, 69, 0.1)",
+                    color: "#fff",
+                    borderRadius: "1px",
+                    "&:hover": {
+                      bgcolor: "#151515",
+                      boxShadow: "0px 4px 16px rgba(43, 52, 69, 0.1)",
                     },
                   }}
+                  variant="contained"
                 >
-                  <Typography
-                    sx={{
-                      color: "#222",
-                    }}
-                    variant="h6"
-                  >
-                    LIFESTYLEE COLLECTION
-                  </Typography>
-
-                  <Typography
-                    sx={{
-                      color: "#222",
-                      fontWeight: 400,
-                      my: 1,
-                    }}
-                    variant="h4"
-                  >
-                    {item.text}
-                  </Typography>
-                  <Stack
-                    sx={{
-                      justifyContent: { xs: "center", sm: "left" },
-                    }}
-                    direction={"row"}
-                    alignItems={"center"}
-                  >
-                    <Typography variant="h5" color={"#333"} mr={1}>
-                      SALE UP TO
-                    </Typography>
-                    <Typography variant="h5" color={"#D23F57"}>
-                      {item.discount} OFF
-                    </Typography>
-                  </Stack>
-                  <Typography
-                    sx={{
-                      color: "#000",
-                      fontWeight: 300,
-                      my: 1,
-                    }}
-                    variant="body2"
-                  >
-                    Get Free Shipping on orders over $99.00
-                  </Typography>
-                  <Button
-                    sx={{
-                      [theme.breakpoints.down("sm")]: {
-                        fontSize: 12,
-                        borderRadius: "8px",
-                      },
-                      px: 5,
-                      py: 1,
-                      mt: 2,
-                      mb: 4,
-                      bgcolor: "#222",
-                      boxShadow: "0px 4px 16px rgba(43, 52, 69, 0.1)",
-                      color: "#fff",
-                      borderRadius: "1px",
-                      "&:hover": {
-                        bgcolor: "#151515",
-                        boxShadow: "0px 4px 16px rgba(43, 52, 69, 0.1)",
-                      },
-                    }}
-                    variant="contained"
-                  >
-                    shop now
-                  </Button>
-                </Box>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+                  shop now
+                </Button>
+              </Box>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
       <Box sx={{ display: { xs: "none", md: "block" }, minWidth: "26.6%" }}>
         <Box sx={{ position: "relative" }}>
           <img width={"100%"} src="./imges/banner-17.jpg" alt="" />
