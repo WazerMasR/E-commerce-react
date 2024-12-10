@@ -10,12 +10,12 @@ import "./slider.css";
 const mySlider = [
   {
     text: "MEN",
-    link: "src/imges/banner-15.jpg",
+    link: "./imges/banner-15.jpg",
     discount: "30%",
   },
   {
     text: "WOMEN",
-    link: "src/imges/banner-25.jpg",
+    link: "./imges/banner-25.jpg",
     discount: "40%",
   },
 ];
@@ -127,7 +127,7 @@ const Hero = () => {
         </Swiper>
       <Box sx={{ display: { xs: "none", md: "block" }, minWidth: "26.6%" }}>
         <Box sx={{ position: "relative" }}>
-          <img width={"100%"} src="src/imges/banner-17.jpg" alt="" />
+          <img width={"100%"} src="./imges/banner-17.jpg" alt="" />
           <Stack
             sx={{
               position: "absolute",
@@ -191,7 +191,7 @@ const Hero = () => {
         </Box>
 
         <Box sx={{ position: "relative" }}>
-          <img width={"100%"} src="src/imges/banner-16.jpg" alt="" />
+          <img width={"100%"} src="./imges/banner-16.jpg" alt="" />
 
           <Stack
             sx={{
